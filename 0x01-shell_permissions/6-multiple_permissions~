@@ -1,2 +1,0 @@
-#!/bin/bash
-chowd u+x g+x o+r hello
