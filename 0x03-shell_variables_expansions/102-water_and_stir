@@ -1,1 +1,2 @@
 #!/bin/bash
+x="echo $WATER | tr water 01234" | y="echo $STIR | tr stir. 01234" | printf "%o" $((5#$x))+$((5#$y)) | tr 01234567 belhnort
