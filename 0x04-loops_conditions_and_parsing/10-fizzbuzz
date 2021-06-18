@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+for ite in {1..100}; do
+    if ! ((ite % 15)) ; then
+	echo FizzBuzz
+    elif ! ((ite % 3)) ; then
+	echo Fizz
+    elif ! ((ite % 5)) ; then
+	echo Buzz
+    else
+	echo $ite
+    fi
+done

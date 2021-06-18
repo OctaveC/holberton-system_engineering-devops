@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+ite=1
+while [ $ite -le 10 ]
+do
+  echo "Holberton School"
+  ite=$((ite + 1))
+done

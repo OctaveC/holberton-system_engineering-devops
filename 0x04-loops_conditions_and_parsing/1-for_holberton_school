@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This Shebang usually is the full path to the interpreter such as /bin/bash.
+# However, said interpreter is not always in the same location (PATH).
+# To make sure that script is portable across different UNIX-like operating
+# systems we use /usr/bin/env command instead as shebang.
+for _ in {1..10}; do echo "Holberton School"; done
