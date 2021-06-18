@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Exercise for Holberton School
 ite=1
 while [ $ite -le 20 ]
 do

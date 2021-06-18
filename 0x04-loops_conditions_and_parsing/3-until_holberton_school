@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# displays Holberton School 10 times using until
 ite=0
 until [ $ite -eq 10 ]
 do

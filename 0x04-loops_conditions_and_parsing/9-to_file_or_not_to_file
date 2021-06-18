@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Exercise for Holberton School
 f=holbertonschool
 if [ -e $f ]; then
       echo $f file exists
