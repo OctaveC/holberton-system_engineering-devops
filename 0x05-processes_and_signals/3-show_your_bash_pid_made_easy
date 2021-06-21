@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Displays PID of lines containing the bash word
+pgrep -l "bash"
