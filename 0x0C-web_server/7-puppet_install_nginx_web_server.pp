@@ -1,7 +1,13 @@
 # Puppet task configuration
+include stdlib
 
 exec {'apt-update':
     command => '/usr/bin/env apt-get -y update',
+}
+
+package {'apache2.2-common':
+  ensure  => 'absent',
+  require => Exec['apt-get-update']
 }
 
 package { 'nginx':
@@ -11,7 +17,7 @@ package { 'nginx':
 
 service {'nginx':
   ensure  =>  'running',
-  require => file_line['perform a redirection'],
+  require => File_line['redirect'],
 }
 
 file { '/var/www/html/index.nginx-debian.html':
