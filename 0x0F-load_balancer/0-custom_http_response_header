@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Track which web server is answering our http requests.
+apt-get update
+apt-get -y install nginx
+host=$(cat /etc/hostname)
+sed -i "/listen \[::\]:80 default_server;/a \\\n\tadd_header X-Served-By \"$host\";" /etc/nginx/sites-enabled/default
+service nginx restart
