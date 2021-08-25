@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Make Ngnix server listen to port 80 through debugging.
-
-rm /etc/nginx/sites-enabled/default
+sudo rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx restart
+sudo service nginx restart
