@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Some nonsense about subdomains.
+
+intel_on_domains() {
+    DOMAIN=$1
+    SUB_DOMAIN=$2
+    RECORD=$(dig +noall +answer "$SUB_DOMAIN.$DOMAIN" | awk '{ print $4 }')
+    IP=$(dig +noall +answer "$SUB_DOMAIN.$DOMAIN" | awk '{ print $NF }')
+
+    echo "The subdomain $SUB_DOMAIN is a $RECORD record and points to $IP"
+}
+
+if [ "$#" == 1 ]; then
+    intel_on_domains "$1" "www"
+    intel_on_domains "$1" "lb-01"
+    intel_on_domains "$1" "web-01"
+    intel_on_domains "$1" "web-02"
+elif [ "$#" == 2 ]; then
+    intel_on_domains "$1" "$2"
+fi
