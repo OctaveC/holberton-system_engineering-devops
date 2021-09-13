@@ -19,13 +19,13 @@ if __name__ == "__main__":
             username = user_id.get("username")
             user_id = str(user_id.get("id"))
             todo = requests.get("http://jsonplaceholder.typicode.com/todos?" +
-                                 "userId=" + user_id).json()
+                                "userId=" + user_id).json()
             task_list = []
 
             for task in todo:
                 tasks_dict = {"task": task.get("title"),
-                            "completed": task.get("completed"),
-                            "username": username}
+                              "completed": task.get("completed"),
+                              "username": username}
                 task_list.append(tasks_dict)
 
             user_tasks[user_id] = task_list
