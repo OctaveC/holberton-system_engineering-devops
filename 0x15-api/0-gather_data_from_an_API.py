@@ -10,13 +10,13 @@ from sys import argv
 if __name__ == "__main__":
     user = requests.get("http://jsonplaceholder.typicode.com/users/" +
                         argv[1]).json()
-    mub_todo = requests.get(
+    todo = requests.get(
         "http://jsonplaceholder.typicode.com/todos?userId=" + argv[1]).json()
-    num_total = requests.get(
+    total = requests.get(
         "http://jsonplaceholder.typicode.com/todos?userId=" + argv[1] +
         "&completed=true").json()
 
     print("Employee {} is done with tasks({}/{}):"
-          .format(user.get("name"), len(num_todo), len(num_total)))
-    for task in done:
+          .format(user.get("name"), len(todo), len(total)))
+    for task in total:
         print("\t " + task.get("title"))
