@@ -5,9 +5,9 @@ TODO list progress.
 Now exporting data in the JSON format!
 And records all tasks from all employees!
 """
+import json
 import requests
 from sys import argv
-import json
 
 
 if __name__ == "__main__":
