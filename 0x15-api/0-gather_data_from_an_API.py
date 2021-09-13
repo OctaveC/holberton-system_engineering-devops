@@ -18,5 +18,5 @@ if __name__ == "__main__":
 
     print("Employee {} is done with tasks({}/{}):"
           .format(user.get("name"), len(todo), len(total)))
-    for task in total:
+    for task in todo:
         print("\t " + task.get("title"))
