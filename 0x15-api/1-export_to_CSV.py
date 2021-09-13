@@ -21,5 +21,5 @@ if __name__ == "__main__":
 
         for task in task_todo:
             csv_file.write('"{}","{}","{}","{}"\n'.
-                          format(user_id, username, task.get("completed"),
-                                 task.get("title")))
+                           format(user_id, username, task.get("completed"),
+                                  task.get("title")))
