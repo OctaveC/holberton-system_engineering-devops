@@ -1,7 +1,7 @@
 # Fix failling requests
 
 exec {'using sed to increase limit':
-  command => "sudo sed -i 's/15/4000/' /etc/default/nginx",
+  command => "sed -i 's/15/4000/' /etc/default/nginx",
   path    => '/usr/local/bin/:/bin/',
 }
 
