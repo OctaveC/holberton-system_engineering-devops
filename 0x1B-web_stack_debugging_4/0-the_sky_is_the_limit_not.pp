@@ -1,11 +1,10 @@
 # Fixing Failling Requests
 
-exec {'using sed':
-  command => "sed -i 's/15/4096/' /etc/default/nginx",
+exec {'increase Ulimit':
   path    => '/usr/local/bin/:/bin/',
 }
 
-exec {'restart':
-  command => 'sudo service nginx restart',
+exec {'nginx':
   path    => ['/bin', '/usr/bin'],
+  command => 'sudo service nginx restart',
 }
