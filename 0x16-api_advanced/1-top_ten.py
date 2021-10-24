@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Gets the top 10 current hot posts """
-import requests
 import json
+import requests
 
 
 def top_ten(subreddit):
@@ -9,12 +9,12 @@ def top_ten(subreddit):
     url = 'https://www.reddit.com/'
 
     try:
-        response = requests.get(
+        answer = requests.get(
             headers={'user-agent': 'custom'},
             url="{}/r/{}/hot.json?limit=10".format(url, subreddit),
         )
 
-        data = response.json()['data']
+        data = answer.json()['data']
         for ite in data['children']:
             print(ite['data']['title'])
 
