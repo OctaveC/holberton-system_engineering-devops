@@ -3,6 +3,7 @@
 import requests
 import json
 
+
 def top_ten(subreddit):
     """ Returns the top 10 hot post a selected subreddit """
 
