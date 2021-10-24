@@ -29,10 +29,10 @@ def count_words(subreddit, word_list, hot_list=[], after=""):
                     print('{}: {}'.format(word, dict[word]))
             return hot_list
 
-        for ite in answer.json()['data']['children']:
-            hot_list += ite['data']['title'].lower().split()
+        for ite in answer.json().get('data').get('children'):
+            hot_list += ite.get('data').get('title').lower().split()
 
-        after = answer.json()['data']['after']
+        after = answer.json().get('data').get('after')
         count_words(subreddit, word_list, hot_list, after)
         return hot_list
 
