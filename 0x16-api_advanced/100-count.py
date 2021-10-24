@@ -5,6 +5,7 @@ import pprint
 import re
 import requests
 
+
 def printer(word_list, hot_list):
     """ Prints our results"""
     total = {}
