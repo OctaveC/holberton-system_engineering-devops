@@ -6,7 +6,6 @@ import json
 
 def top_ten(subreddit):
     """ Returns the top 10 hot post a selected subreddit """
-
     url = 'https://www.reddit.com/'
 
     try:
@@ -16,9 +15,8 @@ def top_ten(subreddit):
         )
 
         data = answer.json()['data']
-
-        for ite in data.get("children"):
-            print(ite.get("data").get("title"))
+        for ite in data['children']:
+            print(ite['data']['title'])
 
     except Exception:
         print(None)
